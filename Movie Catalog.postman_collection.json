@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "daeccb45-7825-44b4-9683-54f22c565bb6",
+		"name": "Movie Catalog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17322080",
+		"_collection_link": "https://restless-astronaut-455066.postman.co/workspace/SoftUni~d339e566-9fe8-47e8-a390-1b96d121dabd/collection/17322080-daeccb45-7825-44b4-9683-54f22c565bb6?action=share&source=collection_link&creator=17322080"
+	},
+	"item": [
+		{
+			"name": "New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"ivantestingpostman\",\r\n    \"firstName\": \"ivan\",\r\n    \"lastName\": \"angelov\",\r\n    \"email\": \"ivantestingpostman@abv.bg\",\r\n    \"password\": \"ivantestingpostman123\",\r\n    \"rePassword\": \"ivantestingpostman123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d24hkho2ozf732.cloudfront.net/api/User/Register",
+					"protocol": "https",
+					"host": [
+						"d24hkho2ozf732",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"User",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ivantestingpostman@abv.bg\",\r\n    \"password\": \"ivantestingpostman123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d24hkho2ozf732.cloudfront.net/api/User/Authentication",
+					"protocol": "https",
+					"host": [
+						"d24hkho2ozf732",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2N2VmYjVhYS05MTBjLTQ3ZjQtYWI5MC1kNzYwZTY0OTgxZDQiLCJpYXQiOiIwNC8xOC8yMDI1IDEwOjQ4OjAxIiwiVXNlcklkIjoiYjQ2NTU3OGQtZjdiYy00NjM5LTQwZGMtMDhkZDdlNjU5NTdmIiwiRW1haWwiOiJpdmFudGVzdGluZ3Bvc3RtYW5AYWJ2LmJnIiwiVXNlck5hbWUiOiJpdmFudGVzdGluZ3Bvc3RtYW4iLCJleHAiOjE3NDQ5OTQ4ODEsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.VVDs2pP7VLpBDBLZDq2F1bTum_NuPUmYpBG1pPVtZZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"MovieFromPostman\",\r\n    \"description\": \"This is movie from Postman\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d24hkho2ozf732.cloudfront.net/api/Movie/Create",
+					"protocol": "https",
+					"host": [
+						"d24hkho2ozf732",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2N2VmYjVhYS05MTBjLTQ3ZjQtYWI5MC1kNzYwZTY0OTgxZDQiLCJpYXQiOiIwNC8xOC8yMDI1IDEwOjQ4OjAxIiwiVXNlcklkIjoiYjQ2NTU3OGQtZjdiYy00NjM5LTQwZGMtMDhkZDdlNjU5NTdmIiwiRW1haWwiOiJpdmFudGVzdGluZ3Bvc3RtYW5AYWJ2LmJnIiwiVXNlck5hbWUiOiJpdmFudGVzdGluZ3Bvc3RtYW4iLCJleHAiOjE3NDQ5OTQ4ODEsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.VVDs2pP7VLpBDBLZDq2F1bTum_NuPUmYpBG1pPVtZZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://d24hkho2ozf732.cloudfront.net/api/Catalog/All",
+					"protocol": "https",
+					"host": [
+						"d24hkho2ozf732",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Catalog",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2N2VmYjVhYS05MTBjLTQ3ZjQtYWI5MC1kNzYwZTY0OTgxZDQiLCJpYXQiOiIwNC8xOC8yMDI1IDEwOjQ4OjAxIiwiVXNlcklkIjoiYjQ2NTU3OGQtZjdiYy00NjM5LTQwZGMtMDhkZDdlNjU5NTdmIiwiRW1haWwiOiJpdmFudGVzdGluZ3Bvc3RtYW5AYWJ2LmJnIiwiVXNlck5hbWUiOiJpdmFudGVzdGluZ3Bvc3RtYW4iLCJleHAiOjE3NDQ5OTQ4ODEsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.VVDs2pP7VLpBDBLZDq2F1bTum_NuPUmYpBG1pPVtZZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"MovieFromPostman-Edited\",\r\n    \"description\": \"This is movie from Postman-Edited\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d24hkho2ozf732.cloudfront.net/api/Movie/Edit?movieId=4a192041-86cb-4455-b407-08dd7e679dab",
+					"protocol": "https",
+					"host": [
+						"d24hkho2ozf732",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "4a192041-86cb-4455-b407-08dd7e679dab"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
