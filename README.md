@@ -1,5 +1,5 @@
 # MovieCatalog
-MovieCatalog | Manual Testing & API Testing
+Manual Testing & API Testing
 Tools: Postman, Jira, TestRail
 
 Created and executed test cases and test scenarios.
